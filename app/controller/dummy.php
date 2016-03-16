@@ -7,8 +7,10 @@ class Dummy {
 		die(\Template::instance()->render('form.html'));
 	}
 
-	public function search( \Base $f3 ) {
+	public function postSearch( \Base $f3 ) {
+		die(var_export($f3->get('POST.searchQuery')));
+	}
+	public function getSearch(\Base $f3) {
 		die(var_export($f3->get('GET.searchQuery')));
 	}
-
 }
